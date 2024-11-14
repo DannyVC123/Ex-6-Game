@@ -28,3 +28,8 @@
 - The game feels repetitive after a few playthroughs because the gameplay doesn’t change in meaningful ways, offering little variation or novelty.
 - The player quickly becomes bored or frustrated because the game starts to feel predictable or stagnant.
 - Randomness or variations don’t sufficiently affect gameplay in a way that encourages further play, making the game feel too predictable.
+
+## Devlog
+
+### Dynamic Maze Generation - Nov. 14, 2024
+I implemented a randomly generated maze using the Depth-First Search (DFS) algorithm. The generation starts at the bottom-left corner of the grid. From there, the algorithm randomly selects an unvisited neighboring tile, marks it as visited, and updates it to the current tile. This process continues until the current tile has no unvisited neighboring tiles. At this point, the algorithm backtracks to the most recently visited tile with unvisited neighbors and continues exploring. The maze generation is complete once all tiles have been visited, ensuring that every cell in the maze can be reached from any other cell.
