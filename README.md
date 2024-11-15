@@ -33,3 +33,5 @@
 
 ### Dynamic Maze Generation - Nov. 14, 2024
 I implemented a randomly generated maze using the Depth-First Search (DFS) algorithm. The generation starts at the bottom-left corner of the grid. From there, the algorithm randomly selects an unvisited neighboring tile, marks it as visited, and updates it to the current tile. This process continues until the current tile has no unvisited neighboring tiles. At this point, the algorithm backtracks to the most recently visited tile with unvisited neighbors and continues exploring. The maze generation is complete once all tiles have been visited, ensuring that every cell in the maze can be reached from any other cell.
+
+![Alt text](https://github.com/DannyVC123/Ex-6-Game/blob/main/Screenshots/maze.png "maze.png")
