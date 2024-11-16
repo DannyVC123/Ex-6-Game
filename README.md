@@ -32,9 +32,36 @@
 ## Devlog
 
 ### Dynamic Maze Generation - Nov. 14, 2024
-I implemented a randomly generated maze using the Depth-First Search (DFS) algorithm. The generation starts at the bottom-left corner of the grid. From there, the algorithm randomly selects an unvisited neighboring tile, marks it as visited, and updates it to the current tile. This process continues until the current tile has no unvisited neighboring tiles. At this point, the algorithm backtracks to the most recently visited tile with unvisited neighbors and continues exploring. The maze generation is complete once all tiles have been visited, ensuring that every cell in the maze can be reached from any other cell.
+A maze is randomly generated using the Depth-First Search (DFS) algorithm. The generation starts at the bottom-left corner of the grid. From there, the algorithm randomly selects an unvisited neighboring tile, marks it as visited, and updates it to the current tile. This process continues until the current tile has no unvisited neighboring tiles. At this point, the algorithm backtracks to the most recently visited tile with unvisited neighbors and continues exploring. The maze generation is complete once all tiles have been visited, ensuring that every cell in the maze can be reached from any other cell.
 
 ![Alt text](https://github.com/DannyVC123/Ex-6-Game/blob/main/Screenshots/maze.png "maze.png")
 
-### Pacman and Ghost Spawning - Nov. 15 2024
+### Pacman and Ghost Spawning - Nov. 15, 2024
 Once the maze is generated, Pacman's starting position is randomly selected from an open spot that isn't a wall. The same process is used for spawning the four ghosts, but to prevent Pacman from immediately losing a life when the game starts, the ghosts cannot spawn within a certain radius around Pacman's starting tile. This reduces the chance of an immediate death and gives the player a fairer start to the game.
+
+### Pacman Movement - Nov. 15, 2024
+Pacman continuously moves in the direction he is facing. The player can change Pacman's orientation by using the W, A, S. and D keys ore the arrow keys.
+
+### Ghost Behavior - Nov. 16, 2024
+Every ghost has a unique target tile to create a distinct challenge for each ghost. The ghosts in the original game checks its neighboring tiles and moves to the tile with the smallest euclidean distance to its target tile. However, because the generated mazes are unique each time and may contain dead ends, this approach is not feasible. Instead, a Breadth-First Search (BFS) algorithm is used to find the shortest path from the ghost's current position to its target tile and moves one tile along the path. The path is recalculated every frame.
+
+#### Target Tiles
+- <span style="color:red">**Blinky:**</span> Blinky’s target tile is always Pacman’s current position, constantly chasing him down.
+![Alt text](https://media.gameinternals.com/pacman-ghosts/pinky-targeting.png "blinky target")
+- <span style="color:pink">**Pinky:**</span> Pinky’s target tile is four tiles in front of Pacman, attempting to anticipate his movements.
+![Alt text](https://media.gameinternals.com/pacman-ghosts/pinky-targeting.png "pinky target")
+- <span style="color:cyan">**Inky:**</span> Inky's target is determined by creating a vector from Blinky’s current tile to a point two tiles in front of Pacman. This vector is then doubled in length, and the endpoint becomes Inky’s target. This strategy allows Inky to work with Blinky and trap Pacman on both sides.
+![Alt text](https://media.gameinternals.com/pacman-ghosts/inky-targeting.png "inky target")
+- <span style="color:orange">**Clyde:**</span> Clyde’s behavior depends on his distance from Pacman. If he is more than eight tiles away, his target is Pacman’s current position. If he’s within eight tiles, Clyde's target switches to the bottom left corner of the maze. This makes Clyde appear threatening at first, but his sudden changes in behavior can be exploited by experienced players. <br>
+![Alt text](https://media.gameinternals.com/pacman-ghosts/clyde-targeting2.png "clyde target 1")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+![Alt text](https://media.gameinternals.com/pacman-ghosts/clyde-targeting.png "clyde target 1")
+
+*Images  from [GameInternals: Understanding Pac-Man Ghost Behavior](https://gameinternals.com/understanding-pac-man-ghost-behavior)*.
+
+
+
+
+
+
+
