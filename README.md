@@ -35,3 +35,6 @@
 I implemented a randomly generated maze using the Depth-First Search (DFS) algorithm. The generation starts at the bottom-left corner of the grid. From there, the algorithm randomly selects an unvisited neighboring tile, marks it as visited, and updates it to the current tile. This process continues until the current tile has no unvisited neighboring tiles. At this point, the algorithm backtracks to the most recently visited tile with unvisited neighbors and continues exploring. The maze generation is complete once all tiles have been visited, ensuring that every cell in the maze can be reached from any other cell.
 
 ![Alt text](https://github.com/DannyVC123/Ex-6-Game/blob/main/Screenshots/maze.png "maze.png")
+
+### Pacman and Ghost Spawning - Nov. 15 2024
+Once the maze is generated, Pacman's starting position is randomly selected from an open spot that isn't a wall. The same process is used for spawning the four ghosts, but to prevent Pacman from immediately losing a life when the game starts, the ghosts cannot spawn within a certain radius around Pacman's starting tile. This reduces the chance of an immediate death and gives the player a fairer start to the game.
