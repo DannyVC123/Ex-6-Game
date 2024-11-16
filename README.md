@@ -40,7 +40,7 @@ A maze is randomly generated using the Depth-First Search (DFS) algorithm. The g
 Once the maze is generated, Pacman's starting position is randomly selected from an open spot that isn't a wall. The same process is used for spawning the four ghosts, but to prevent Pacman from immediately losing a life when the game starts, the ghosts cannot spawn within a certain radius around Pacman's starting tile. This reduces the chance of an immediate death and gives the player a fairer start to the game.
 
 ### Pacman Movement - Nov. 15, 2024
-Pacman continuously moves in the direction he is facing. The player can change Pacman's orientation by using the W, A, S. and D keys ore the arrow keys.
+Pacman continuously moves in the direction he is facing. The player can change Pacman's orientation using the W, A, S, and D keys or the arrow keys.
 
 ### Ghost Behavior - Nov. 16, 2024
 Every ghost has a unique target tile to create a distinct challenge for each ghost. The ghosts in the original game checks its neighboring tiles and moves to the tile with the smallest euclidean distance to its target tile. However, because the generated mazes are unique each time and may contain dead ends, this approach is not feasible. Instead, a Breadth-First Search (BFS) algorithm is used to find the shortest path from the ghost's current position to its target tile and moves one tile along the path. The path is recalculated every frame.
