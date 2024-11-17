@@ -59,6 +59,12 @@ Every ghost has a unique target tile to create a distinct challenge for each gho
 
 *Images  from [GameInternals: Understanding Pac-Man Ghost Behavior](https://gameinternals.com/understanding-pac-man-ghost-behavior)*.
 
+### Maze Generation Update - Nov. 16, 2024
+
+Generating the maze using Depth-First Search (DFS) results in a perfect, loop-free structure, where each tile has only one unique path. While this ensures a challenging maze, it also makes it nearly impossible to avoid the ghosts. If you reach a dead end, the only way out is to backtrack, but since the ghosts follow the same path, they can trap you in these dead ends.
+
+To address this issue, I modified the maze generation process. I am still generating the maze with DFS, but afterward I delete random walls, creating additional paths throughout the maze. This introduces more routes, improving the chances of avoiding the ghosts by providing alternative escape routes.
+
 
 
 
