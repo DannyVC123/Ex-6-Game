@@ -63,7 +63,7 @@ Every ghost has a unique target tile to create a distinct challenge for each gho
 
 Generating the maze using Depth-First Search (DFS) results in a perfect, loop-free structure, where each tile has only one unique path. While this ensures a challenging maze, it also makes it nearly impossible to avoid the ghosts. If you reach a dead end, the only way out is to backtrack, but since the ghosts follow the same path, they can trap you in these dead ends.
 
-To address this issue, I modified the maze generation process. I am still generating the maze with DFS, but afterward I delete random walls. This introduces more routes, improving the chances of avoiding the ghosts by providing alternative escape routes.
+To address this issue, I modified the maze generation process. I am still generating the maze with DFS, but afterward I delete random walls. This introduces more paths, improving the chances of avoiding the ghosts by providing alternative escape routes.
 
 
 
