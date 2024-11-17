@@ -42,7 +42,7 @@ Once the maze is generated, Pacman's starting position is randomly selected from
 ### Pacman Movement - Nov. 15, 2024
 Pacman continuously moves in the direction he is facing. The player can change Pacman's orientation using the W, A, S, and D keys or the arrow keys.
 
-### Ghost Behavior - Nov. 16, 2024
+### Ghost Movement - Nov. 16, 2024
 Every ghost has a unique target tile to create a distinct challenge for each ghost. The ghosts in the original game checks its neighboring tiles and moves to the tile with the smallest euclidean distance to its target tile. However, because the generated mazes are unique each time and may contain dead ends, this approach is not feasible. Instead, a Breadth-First Search (BFS) algorithm is used to find the shortest path from the ghost's current position to its target tile and moves one tile along the path. The path is recalculated every frame.
 
 #### Target Tiles
@@ -63,7 +63,7 @@ Every ghost has a unique target tile to create a distinct challenge for each gho
 
 Generating the maze using Depth-First Search (DFS) results in a perfect, loop-free structure, where each tile has only one unique path. While this ensures a challenging maze, it also makes it nearly impossible to avoid the ghosts. If you reach a dead end, the only way out is to backtrack, but since the ghosts follow the same path, they can trap you in these dead ends.
 
-To address this issue, I modified the maze generation process. I am still generating the maze with DFS, but afterward I delete random walls, creating additional paths throughout the maze. This introduces more routes, improving the chances of avoiding the ghosts by providing alternative escape routes.
+To address this issue, I modified the maze generation process. I am still generating the maze with DFS, but afterward I delete random walls. This introduces more routes, improving the chances of avoiding the ghosts by providing alternative escape routes.
 
 
 
