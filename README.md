@@ -43,7 +43,7 @@ Once the maze is generated, Pacman's starting position is randomly selected from
 Pacman continuously moves in the direction he is facing. The player can change Pacman's orientation using the W, A, S, and D keys or the arrow keys.
 
 ### Ghost Movement - Nov. 16, 2024
-Every ghost has a unique target tile to create a distinct challenge for each ghost. The ghosts in the original game checks its neighboring tiles and moves to the tile with the smallest euclidean distance to its target tile. However, because the generated mazes are unique each time and may contain dead ends, this approach is not feasible. Instead, a Breadth-First Search (BFS) algorithm is used to find the shortest path from the ghost's current position to its target tile and moves one tile along the path. The path is recalculated every frame.
+Every ghost has a unique target tile to create a distinct challenge for each ghost. In the original game, each ghost checks its neighboring tiles and moves to the tile with the smallest euclidean distance to its target tile. However, because the generated mazes are unique each time and may contain dead ends, this approach is not feasible. Instead, a Breadth-First Search (BFS) algorithm is used to find the shortest path from the ghost's current position to its target tile and moves one tile along the path. The path is recalculated every frame.
 
 #### Target Tiles
 - <span style="color:red">**Blinky:**</span> Blinky’s target tile is always Pacman’s current position, constantly chasing him down. <br>
@@ -61,9 +61,17 @@ Every ghost has a unique target tile to create a distinct challenge for each gho
 
 ### Maze Generation Update - Nov. 16, 2024
 
-Generating the maze using Depth-First Search (DFS) results in a perfect, loop-free structure, where each tile has only one unique path. While this ensures a challenging maze, it also makes it nearly impossible to avoid the ghosts. If you reach a dead end, the only way out is to backtrack, but since the ghosts follow the same path, they can trap you in these dead ends.
+Generating the maze using DFS results in a perfect, loop-free structure, where each tile has only one unique path. While this ensures a challenging maze, it also makes it nearly impossible to avoid the ghosts. If you reach a dead end, the only way out is to backtrack, but since the ghosts follow the same path, they can trap you in these dead ends.
 
 To address this issue, I modified the maze generation process. I am still generating the maze with DFS, but afterward I delete random walls. This introduces more paths, improving the chances of avoiding the ghosts by providing alternative escape routes.
+
+### Chase Mode & Scatter Mode - Nov. 17, 2024
+
+In Pacman, the ghost behavior is divided into two primary modes: Chase Mode and Scatter Mode.
+
+The ghost behavior described above is known as Chase Mode. In Chase Mode, the ghosts actively pursue Pacman, working together to capture him. While Chase Mode keeps the game thrilling, having the ghosts constantly in pursuit can make the game feel overwhelmingly difficult for the player.
+
+To balance this, Scatter Mode is introduced. Every few seconds, the ghosts switch from Chase Mode to Scatter Mode. In Scatter Mode, instead of targeting Pac-Man, each ghost moves towards a designated corner of the maze. This provides brief moments of relief, as the ghosts spread out and become less aggressive, allowing the player to evade them more easily. The alternating pattern between Chase and Scatter Modes creates a fairer challenge and makes gameplay more engaging, offering a tactical rhythm that skilled players can use to their advantage.
 
 
 
