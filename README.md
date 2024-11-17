@@ -57,6 +57,8 @@ Every ghost has a unique target tile to create a distinct challenge for each gho
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 ![Alt text](https://media.gameinternals.com/pacman-ghosts/clyde-targeting.png "clyde target 1")
 
+If any of the target tiles are out of bounds of the maze, then the closest valid tile is selected for the target tile instead.
+
 *Images  from [GameInternals: Understanding Pac-Man Ghost Behavior](https://gameinternals.com/understanding-pac-man-ghost-behavior)*.
 
 ### Maze Generation Update - Nov. 16, 2024
