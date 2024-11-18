@@ -104,6 +104,25 @@ My game features a variety of sound effects:
 - **Score Milestones:** A short sound effect is played whenever the player's score reaches a multiple of 100 (e.g., 100, 200, 300). This audio cue helps the player track their progress without needing to constantly check the score.
 
 
+## After Action Report
+I originally set out to create a game inspired by Pacman, but with significant changes to make it more challenging and engaging. My goal was to provide a fun, challenging experience that pushed players to strategize and adapt, without making it overly frustrating. Rather than having multiple levels with fixed maze layouts, I decided to implement dynamic maze generation, so that each playthrough would present a new, unique challenge for the player. This approach allowed for greater variety and replayability, as no two games would be the same. Other than these changes, I expected the core gameplay mechanics to closely follow the original Pacman game.
+
+In the end, the dynamic maze generation significantly altered the original game's structure, requiring me to adjust some of the mechanics to better fit my new maze design. While the original game's maze was carefully crafted to provide a challenge without feeling too impossible, my randomly generated mazes introduced certain elements that were overly difficult, as noted in the devlog. As a result, I made necessary tweaks to ensure the gameplay remained balanced. Despite these adjustments, I stayed true to my two main aesthetic goals: creating a challenging yet enjoyable game and ensuring high replayability.
+
+Looking back, I wish I had anticipated earlier that the maze generation would force me to alter game mechanics. This insight would have allowed me to better plan for these changes and ultimately create a more refined player experience. However, this realization only came through testing as I developed the game.
+
+Ultimately, I was able to create a fun and unique version of Pacman with added features. The most challenging aspect I struggled with was the ghosts' target tiles and movement behavior. I needed to ensure that all target tiles were valid, open tiles, and had to use BFS to handle their pathfinding, unlike the original game. While there were a few hiccups during the implementation of other features, they were generally smooth to integrate and didn't pose significant challenges.
+
+Creating this game allowed me to sharpen my skills in Unity and C#. Additionally, I got to brush up my knowledge of data structures and algorithms, as I required both the DFS and BFS pathfinding algorithms in this project. Finally, I gained a deeper appreciation for the original Pacman game and the brilliance behind its design. The simplicity of its mechanics, combined with a finely-tuned balance between challenge and satisfaction, is what makes it an enduring classic.
+
+
+
+
+
+
+
+
+
 
 
 
