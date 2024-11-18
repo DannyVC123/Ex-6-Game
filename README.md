@@ -75,6 +75,16 @@ The ghost behavior described above is known as Chase Mode. In Chase Mode, the gh
 
 To balance this, Scatter Mode is introduced. Every few seconds, the ghosts switch from Chase Mode to Scatter Mode. In Scatter Mode, instead of targeting Pac-Man, each ghost moves towards a designated corner of the maze. This provides brief moments of relief, as the ghosts spread out and become less aggressive, allowing the player to evade them more easily. The alternating pattern between Chase and Scatter Modes creates a fairer challenge and makes gameplay more engaging, offering a tactical rhythm that skilled players can use to their advantage.
 
+### Lives System - Nov. 17, 2024
+
+The player starts out with 3 lives. When they collide with a ghost, they lose a life. Each time they lose a life, the maze resets, giving Pacman and the ghosts new starting positions. When all 3 lives are lost, the game ends.
+
+
+
+
+
+
+
 
 
 
