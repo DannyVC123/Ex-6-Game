@@ -29,6 +29,12 @@
 - The player quickly becomes bored or frustrated because the game starts to feel predictable or stagnant.
 - Randomness or variations don’t sufficiently affect gameplay in a way that encourages further play, making the game feel too predictable.
 
+## Core Loop:
+- Navigate the maze by turning pacman toward pellets and away from ghosts
+- Eat pellets to increase your score and progress toward winning
+- Avoid ghosts to prevent losing lives; lose a life if caught by a ghost
+- Repeat until you either collect enough pellets to win or lose all three lives
+
 ## Devlog
 
 ### Dynamic Maze Generation - Nov. 14, 2024
