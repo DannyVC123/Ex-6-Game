@@ -1,4 +1,4 @@
-# Pacman Game
+# Pacman Reimagined
 
 ## Aesthetic Goals:
 ### Goal 1: Challenge
