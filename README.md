@@ -77,11 +77,21 @@ To balance this, Scatter Mode is introduced. Every few seconds, the ghosts switc
 
 ### Lives System - Nov. 17, 2024
 
-The player starts out with three lives. When Pacman collides with a ghost, they lose a life. Each time they lose a life, the maze resets, giving Pacman and the ghosts new starting positions. When all three lives are lost, the game ends.
+The player starts out with three lives. When Pacman collides with a ghost, they lose a life. Each time they lose a life, the maze resets, giving Pacman and the ghosts new starting positions. When all three lives are lost, a "Game Over" message is displayed, and the game ends.
 
 ### Pellets and Scoring - Nov. 17, 2024
 
 When the game starts, all non-wall tiles contain a pellet. If Pacman eats a pellet, his score increases by one point. In the original game, Pacman must collect all the pellets to complete the level. However, because my game uses dynamic maze generation, some pellets can end up in challenging spots, like dead ends. To account for this, the player only needs to collect 300 pellets to win the game. Upon reaching this goal, a "You Win" message is displayed, but the player can continue playing the game to achieve a higher score until all three lives are lost.
+
+If the player continues playing after winning, they will eventually see both a "You Win" and a "Game Over" message simultaneously. This is intentional, indicating that the player has achieved the set goal but has now exhausted all their lives.
+
+### Sound - Nov. 17, 2024
+
+My game features a variety of sound effects:
+
+- **Pacman Eating:** This classic sound plays continuously throughout the game until Pacman loses all three lives.
+- **Pacman Death:** A death sound is triggered each time Pacman loses a life, providing an auditory cue and a brief pause before Pacman respawns.
+- **Score Milestones:** A short sound effect is played whenever the player's score reaches a multiple of 100 (e.g., 100, 200, 300). This audio cue helps the player track their progress without needing to constantly check the score.
 
 
 
