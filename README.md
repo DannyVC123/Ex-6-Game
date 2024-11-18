@@ -39,6 +39,8 @@ A maze is randomly generated using the Depth-First Search (DFS) algorithm. The g
 ### Pacman and Ghost Spawning - Nov. 15, 2024
 Once the maze is generated, Pacman's starting position is randomly selected from an open spot that isn't a wall. The same process is used for spawning the four ghosts, but to prevent Pacman from immediately losing a life when the game starts, the ghosts cannot spawn within a certain radius around Pacman's starting tile. This reduces the chance of an immediate death and gives the player a fairer start to the game.
 
+![Alt text](https://github.com/DannyVC123/Ex-6-Game/blob/main/Screenshots/spawning.png "spawning.png")
+
 ### Pacman Movement - Nov. 15, 2024
 Pacman continuously moves in the direction he is facing. The player can change Pacman's orientation using the W, A, S, and D keys or the arrow keys.
 
@@ -84,6 +86,8 @@ The player starts out with three lives. When Pacman collides with a ghost, they 
 When the game starts, all non-wall tiles contain a pellet. If Pacman eats a pellet, his score increases by one point. In the original game, Pacman must collect all the pellets to complete the level. However, because my game uses dynamic maze generation, some pellets can end up in challenging spots, like dead ends. To account for this, the player only needs to collect 300 pellets to win the game. Upon reaching this goal, a "You Win" message is displayed, but the player can continue playing the game to achieve a higher score until all three lives are lost.
 
 If the player continues playing after winning, they will eventually see both a "You Win" and a "Game Over" message simultaneously. This is intentional, indicating that the player has achieved the set goal but has now exhausted all their lives.
+
+![Alt text](https://github.com/DannyVC123/Ex-6-Game/blob/main/Screenshots/pellets.png "spawning.png")
 
 ### Sound - Nov. 17, 2024
 
