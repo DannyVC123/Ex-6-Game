@@ -115,6 +115,11 @@ Ultimately, I was able to create a fun and unique version of Pacman with added f
 
 Creating this game allowed me to sharpen my skills in Unity and C#. Additionally, I got to brush up my knowledge of data structures and algorithms, as I required both the DFS and BFS pathfinding algorithms in this project. Finally, I gained a deeper appreciation for the original Pacman game and the brilliance behind its design. The simplicity of its mechanics, combined with a finely-tuned balance between challenge and satisfaction, is what makes it an enduring classic.
 
+## Credits
+- Ghost Behavior: [GameInternals: Understanding Pac-Man Ghost Behavior](https://gameinternals.com/understanding-pac-man-ghost-behavior)
+- Sprites: [The Spriter's Resource](https://www.spriters-resource.com/arcade/pacman/), [mattbatwings: I Made Pac-Man with just Redstone!](https://www.youtube.com/watch?v=49B7L22dxiE&ab_channel=mattbatwings)
+- Sound Effects: [Classic Gaming: Pac-Man Sounds](https://classicgaming.cc/classics/pac-man/sounds)
+
 
 
 
